@@ -24,8 +24,9 @@ Data created from PDFs in ```guue```.
 Directory of TED texts in PDF format. 
 
 ## > Share
-If you use it, please cite:  
-```@InProceedings{10.1007/978-3-031-47112-4_17,
+If you use it, please cite:    
+```
+@InProceedings{10.1007/978-3-031-47112-4_17,
 author="Nai, Roberto
 and Sulis, Emilio
 and Genga, Laura",
@@ -40,4 +41,5 @@ publisher="Springer Nature Switzerland",
 address="Cham",
 pages="178--188",
 isbn="978-3-031-47112-4"
-}```  
+}
+``` 
