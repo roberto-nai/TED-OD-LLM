@@ -5,7 +5,7 @@ This project takes into account the Italian texts of the tenders on the Tenders 
 
 ## TED Open Data - Download
 Sample URL with a PDF: [https://ted.europa.eu/it/notice/2872-2016/pdf](https://ted.europa.eu/it/notice/2872-2016/pdf)  
-The 2016 - 2022 sample files (in Italian) are also available in a public Drive here: [https://bit.ly/3QBxdC3](https://bit.ly/3QBxdC3)
+The 2016 - 2022 sample files (in Italian) are also available in a public Drive here: [https://bit.ly/3QBxdC3](https://bit.ly/3QBxdC3). Download the PDFs in the ```guue``` directory.     
 
 ## > Script Execution
 ```01_read_pdf.ipynb```  
