@@ -16,6 +16,8 @@ NOTE (1): see ```requirements.txt``` for the required libraries (```pip install 
 NOTE (2): create the ```.env``` file with your Open AI API key in it (```OPENAI_API_KEY="..."```).  
 
 ## > Directories
+```config```  
+Directory with the configuration file in YAML format (```config.yml```) and script to read it (```config_reader.py```).   
 ```data```  
 Data created from PDFs in ```guue```.  
 ```guue```    
