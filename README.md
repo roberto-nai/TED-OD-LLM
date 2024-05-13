@@ -2,6 +2,7 @@
 ![PyPI - Python Version](https://img.shields.io/badge/python-3.12-3776AB?logo=python)    
 
 This project takes into account the Italian texts of the tenders on the Tenders Electronic Daily (TED) portal and extracts the date of the bids-opening event in the "Tender Opening Method" section, using LLM capabilities.  
+TED portal main page: [https://ted.europa.eu/en/](https://ted.europa.eu/en/).   
 
 ## TED Open Data - Download
 Sample URL with a PDF: [https://ted.europa.eu/it/notice/2872-2016/pdf](https://ted.europa.eu/it/notice/2872-2016/pdf)  
