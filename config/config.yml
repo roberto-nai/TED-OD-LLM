@@ -9,4 +9,4 @@ FILE_BID_TEXT_DATE: bid_opening_text_date.csv # file after CSV parsing to find d
 FILE_BID_TEXT_DATE_LABEL: bid_opening_text_date_label.csv # annotated dates to be compared with FILE_BID_TEXT_DATE
 CSV_SEP: ;
 TED_URL: https://ted.europa.eu/TED # Text of a URL to be ignored when reading PDFs
-OPENAI_MODEL_NAME: gpt-4 # or gpt-3.5-turbo
+OPENAI_MODEL_NAME: gpt-3.5-turbo # or gpt-4

@@ -16,7 +16,7 @@ For each text in the CSV extracted in the script ```01_read_pdf```, it requests 
 
 ## > Script Dependencies
 See ```requirements.txt``` for the required libraries (```pip install -r requirements.txt```).  
-Create the ```.env``` file with your Open AI API key in it (```OPENAI_API_KEY="..."```).  
+Create the ```.env``` file with your Open AI API key in it (```OPENAI_API_KEY="..."```) in the root directory of the project.  
 
 ## > Directories
 ```config```  
