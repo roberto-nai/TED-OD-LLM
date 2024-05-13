@@ -12,8 +12,10 @@ The 2016 - 2022 sample files (in Italian) are also available in a public Drive h
 Reads the PDFs and extracts the portion of text contained in the section 'Modalità di apertura delle offerte'; the texts are saved in a CSV file.      
 ```02_read_date.ipynb```  
 For each text in the CSV extracted in the script ```01_read_pdf```, it requests the LLM to identify the date.  
-NOTE (1): see ```requirements.txt``` for the required libraries (```pip install -r requirements.txt```).   
-NOTE (2): create the ```.env``` file with your Open AI API key in it (```OPENAI_API_KEY="..."```).  
+
+## > Script Dependencies
+See ```requirements.txt``` for the required libraries (```pip install -r requirements.txt```).  
+Create the ```.env``` file with your Open AI API key in it (```OPENAI_API_KEY="..."```).  
 
 ## > Directories
 ```config```  
@@ -23,7 +25,7 @@ Data created from PDFs in ```guue```.
 ```guue```    
 Directory of TED texts in PDF format. 
 
-## > Share
+## Share
 If you use it, please cite:    
 ```
 @InProceedings{10.1007/978-3-031-47112-4_17,
