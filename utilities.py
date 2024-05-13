@@ -24,23 +24,23 @@ def list_files_by_type(directory: str, extension: str) -> list:
     return file_list
 
 
-def read_csv_data_to_df(path: str, col_type: dict, csv_sep: str = ",") -> pd.DataFrame:
+def read_csv_data_to_df(path_csv: str, col_type: dict, csv_sep: str = ",") -> pd.DataFrame:
     """
     Reads data from a CSV file into a pandas DataFrame with specified columns and data types.
 
     Parameters:
-        path (str): the file path to the CSV file to be read.
+        path_csv (str): the file path to the CSV file to be read.
         col_type (dict): a dictionary of column names and type.
-        sep (str): the delimiter string used in the CSV file. Defaults to ';'.
+        csv_sep (str): the delimiter string used in the CSV file. Defaults to ';'.
 
     Returns:
         pd.DataFrame: a pandas DataFrame containing the data read from the CSV file.
     """
     df = None
     if col_type is None:
-        df = pd.read_csv(path, sep=csv_sep, low_memory=False)
+        df = pd.read_csv(filepath_or_buffer = path_csv, sep=csv_sep, low_memory=False)
     else:
-        df = pd.read_csv(path, dtype=col_type, sep=csv_sep, low_memory=False)
+        df = pd.read_csv(filepath_or_buffer = path_csv, sep=csv_sep, dtype=col_type, low_memory=False)
     df = df.drop_duplicates()
     return df
 
