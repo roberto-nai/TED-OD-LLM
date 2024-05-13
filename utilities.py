@@ -38,8 +38,10 @@ def read_csv_data_to_df(path_csv: str, col_type: dict, csv_sep: str = ",") -> pd
     """
     df = None
     if col_type is None:
+        print("Reading CSV without col_type...")
         df = pd.read_csv(filepath_or_buffer = path_csv, sep=csv_sep, low_memory=False)
     else:
+        print("Reading CSV with col_type...")
         df = pd.read_csv(filepath_or_buffer = path_csv, sep=csv_sep, dtype=col_type, low_memory=False)
     df = df.drop_duplicates()
     return df
