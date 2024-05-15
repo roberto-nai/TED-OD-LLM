@@ -11,12 +11,17 @@ The 2016 - 2022 sample files (in Italian) are also available in a public Drive h
 ## > Script Execution
 ```01_read_pdf.ipynb```  
 Reads the PDFs and extracts the portion of text contained in the section 'Modalità di apertura delle offerte'; the texts are saved in a CSV file.      
-```02_read_date.ipynb```  
-For each text in the CSV extracted in the script ```01_read_pdf```, it requests the LLM to identify the date.  
+```02_read_date_OPENAI.ipynb```  
+For each text in the CSV extracted in the script ```01_read_pdf.ipynb```, it requests the LLM to identify the date. Use OpenAI models.  
+```02_read_date_HUGCHAT.ipynb```  
+For each text in the CSV extracted in the script ```01_read_pdf.ipynb```, it requests the LLM to identify the date. Use HuggingChat supported by HuggingFace.  
 
 ## > Script Dependencies
 See ```requirements.txt``` for the required libraries (```pip install -r requirements.txt```).  
-Create the ```.env``` file with your Open AI API key in it (```OPENAI_API_KEY="..."```) in the root directory of the project.  
+Create the ```.env``` in the root directory of the project.   
+To use OpenAI, save your Open AI API key (```OPENAI_API_KEY="..."```) in the ```.env``` file.  
+To use HuggingChat, subscribe to HuggingFace then save the login (```HC_EMAIL="..."```) and password (```HC_PASS="..."```) in the ```.env``` file.  
+NOTE: HuggingChat has a login and query limit.  
 
 ## > Directories
 ```config```  

@@ -38,11 +38,27 @@ def read_csv_data_to_df(path_csv: str, col_type: dict, csv_sep: str = ",") -> pd
     """
     df = None
     if col_type is None:
-        print("Reading CSV without col_type...")
+        print("Reading CSV without input col_type...")
         df = pd.read_csv(filepath_or_buffer = path_csv, sep=csv_sep, low_memory=False)
     else:
-        print("Reading CSV with col_type...")
+        print("Reading CSV with input col_type...")
         df = pd.read_csv(filepath_or_buffer = path_csv, sep=csv_sep, dtype=col_type, low_memory=False)
     df = df.drop_duplicates()
     return df
 
+def convert_dmy_to_ymd(date_str:str) -> str:
+    """
+    Converts a date in the format dd/mm/yyyy to yyyyy-mm-dd.
+
+    Args:
+        date_str (str): Date in dd/mm/yyyy.
+
+    Returns:
+        str: date in yyyyy-mm-dd.
+    """
+    if date_str == "-1":
+        return None
+    else:
+        # print("Converting:", date_str) # debug
+        dt = pd.to_datetime(date_str, format='%d/%m/%Y').strftime('%Y-%m-%d')
+        return dt
