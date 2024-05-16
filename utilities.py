@@ -63,7 +63,7 @@ def convert_dmy_to_ymd(date_str:str) -> str:
         dt = pd.to_datetime(date_str, format='%d/%m/%Y').strftime('%Y-%m-%d')
         return dt
 
-def left_join_df(df1: pd.DataFrame, df2: pd.DataFrame, key_column:str) -> pd.DataFrame:
+def left_join_df(df1: pd.DataFrame, df2: pd.DataFrame, key_column:str, columns_to_remove:list) -> pd.DataFrame:
     """
     Perform a left join on two dataframes based on the 'file_name' column,
     and remove the 'text' columns from both dataframes before joining.
@@ -72,13 +72,14 @@ def left_join_df(df1: pd.DataFrame, df2: pd.DataFrame, key_column:str) -> pd.Dat
         df1 (pd.DataFrame): The first dataframe with columns 'file_name', 'case_id', 'text', and 'date'.
         df2 (pd.DataFrame): The second dataframe with columns 'file_name', 'text', and 'label'.
         key_column (str): The join column name.
+        columns_to_remove (list): A list of column names to remove from both dataframes if they are present.
 
     Returns:
         pd.DataFrame: A new dataframe resulting from the left join on 'file_name', with the 'text' columns removed from both input dataframes.
     """
-    # Drop 'text' columns from both dataframes
-    df1 = df1.drop(columns=["text"])
-    df2 = df2.drop(columns=["text"])
+    # Drop 'columns_to_remove' columns from both dataframes
+    df1 = df1.drop(columns=[col for col in columns_to_remove if col in df1], errors='ignore')
+    df2 = df2.drop(columns=[col for col in columns_to_remove if col in df2], errors='ignore')
 
     # Perform left join on 'file_name'
     merged_df = pd.merge(df1, df2, on=key_column, how="left")
