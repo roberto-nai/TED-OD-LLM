@@ -99,6 +99,9 @@ def calculate_accuracy(df: pd.DataFrame, col1: str, col2: str) -> float:
     Returns:
         float: The accuracy as the proportion of rows where 'date' equals 'label'.
     """
+    
+    # print(f"Column type: {df[col1].dtype},{df[col2].dtype}") # debug (check colum type)
+
     # Calculate the number of matches
     matches = (df[col1] == df[col2]).sum()
     
