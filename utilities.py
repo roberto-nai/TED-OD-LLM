@@ -62,3 +62,46 @@ def convert_dmy_to_ymd(date_str:str) -> str:
         # print("Converting:", date_str) # debug
         dt = pd.to_datetime(date_str, format='%d/%m/%Y').strftime('%Y-%m-%d')
         return dt
+
+def left_join_df(df1: pd.DataFrame, df2: pd.DataFrame, key_column:str) -> pd.DataFrame:
+    """
+    Perform a left join on two dataframes based on the 'file_name' column,
+    and remove the 'text' columns from both dataframes before joining.
+
+    Parameters:
+        df1 (pd.DataFrame): The first dataframe with columns 'file_name', 'case_id', 'text', and 'date'.
+        df2 (pd.DataFrame): The second dataframe with columns 'file_name', 'text', and 'label'.
+        key_column (str): The join column name.
+
+    Returns:
+        pd.DataFrame: A new dataframe resulting from the left join on 'file_name', with the 'text' columns removed from both input dataframes.
+    """
+    # Drop 'text' columns from both dataframes
+    df1 = df1.drop(columns=["text"])
+    df2 = df2.drop(columns=["text"])
+
+    # Perform left join on 'file_name'
+    merged_df = pd.merge(df1, df2, on=key_column, how="left")
+
+    return merged_df
+
+
+def calculate_accuracy(df: pd.DataFrame, col1: str, col2: str) -> float:
+    """
+    Calculate the accuracy of matching 'col1' and 'col2' columns in a dataframe.
+
+    Parameters:
+        df (pd.DataFrame): The dataframe containing 'date' and 'label' columns.
+        col1 (str): The name of the first column to compare.
+        col2 (str): The name of the second column to compare.
+
+    Returns:
+        float: The accuracy as the proportion of rows where 'date' equals 'label'.
+    """
+    # Calculate the number of matches
+    matches = (df[col1] == df[col2]).sum()
+    
+    # Calculate the accuracy
+    accuracy = matches / len(df)
+    
+    return accuracy
