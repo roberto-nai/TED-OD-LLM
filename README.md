@@ -4,6 +4,10 @@
 This project takes into account the Italian texts of the tenders on the Tenders Electronic Daily (TED) portal and extracts the date of the bids-opening event in the "Tender Opening Method" section, using LLM capabilities.  
 TED portal main page: [https://ted.europa.eu/en/](https://ted.europa.eu/en/).   
 
+## TED Open Data - Documentation
+TED CSV open data NOTES & CODEBOOK (PDF): [https://data.europa.eu/api/hub/store/data/ted-csv-data-information-v3-6.pdf](https://data.europa.eu/api/hub/store/data/ted-csv-data-information-v3-6.pdf)  
+TED CSV open data Advanced notes on methodology (PDF): [http://data.europa.eu/euodp/en/data/storage/f/2022-02-14T122830/TED_advanced_notes_vers_0.92.pdf](http://data.europa.eu/euodp/en/data/storage/f/2022-02-14T122830/TED_advanced_notes_vers_0.92.pdf)  
+
 ## TED Open Data - Download
 Sample URL with a PDF: [https://ted.europa.eu/it/notice/2872-2016/pdf](https://ted.europa.eu/it/notice/2872-2016/pdf)  
 The 2016 - 2022 sample files (in Italian) are also available in a public Drive here: [https://bit.ly/3QBxdC3](https://bit.ly/3QBxdC3). Download the PDFs in the ```guue``` directory.     
