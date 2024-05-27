@@ -30,7 +30,10 @@ Directory with the configuration file in YAML format (```config.yml```) and scri
 ```data```  
 Data created from PDFs in ```guue```.  
 ```guue```    
-Directory of TED texts in PDF format. 
+Directory of TED texts in PDF format.  
+
+## Other projects
+This project is also related to: [https://github.com/roberto-nai/TED-OD-EVENTLOG](https://github.com/roberto-nai/TED-OD-EVENTLOG)  
 
 ## Share
 If you use it, please cite:    
