@@ -22,7 +22,7 @@ See ```requirements.txt``` for the required libraries (```pip install -r require
 Create the ```.env``` in the root directory of the project.   
 To use OpenAI, save your Open AI API key (```OPENAI_API_KEY="..."```) in the ```.env``` file.  
 To use HuggingChat, subscribe to HuggingFace then save the login (```HC_EMAIL="..."```) and password (```HC_PASS="..."```) in the ```.env``` file.  
-NOTE: HuggingChat has a login and query limit, so a time.sleep() was applied to avoid request blocking problems.    
+NOTE: HuggingChat has a login and query limit, so a ```time.sleep()``` was applied to avoid request blocking problems.    
 
 ## > Directories
 ```config```  
