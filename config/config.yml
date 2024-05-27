@@ -11,3 +11,4 @@ CSV_SEP: ;
 TED_URL: https://ted.europa.eu/TED # Text of a URL to be ignored when reading PDFs
 OPENAI_MODEL_NAME: gpt-3.5-turbo # [gpt-4, gpt-4-32k]
 TIME_SLEEP: 3 # seconds
+BID_SAMPLE_SIZE: 10 # Sets a sample size (to be used instead of the total size of the dataset); 0 means to use the whole dataset instead of a sample
