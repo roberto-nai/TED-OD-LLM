@@ -15,6 +15,7 @@ Reads the PDFs and extracts the portion of text contained in the section 'Modali
 For each text in the CSV extracted in the script ```01_read_pdf.ipynb```, it requests the LLM to identify the date. Use OpenAI models.  
 ```02_read_date_HUGCHAT.ipynb```  
 For each text in the CSV extracted in the script ```01_read_pdf.ipynb```, it requests the LLM to identify the date. Use HuggingChat supported by HuggingFace.  
+For ```02_*``` scripts, set ```BID_SAMPLE_SIZE``` in the ```config.yml``` file to apply LLM to only one sample out of the total. If ```BID_SAMPLE_SIZE``` is 0, LLM will be applied to the entire dataset.  
 
 ## > Script Dependencies
 See ```requirements.txt``` for the required libraries (```pip install -r requirements.txt```).  
