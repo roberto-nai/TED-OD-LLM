@@ -6,8 +6,8 @@ DATA_DIR: data # directory with data (extracted parsing the PDFs)
 BID_OPENING_MARKER_START: Modalità di apertura delle offerte
 BID_OPENING_MARKER_END: "Sezione VI: Altre informazioni"
 FILE_BID_TEXT: bid_opening_text_LANG.csv # file created after PDF parsing with text (input for LLM); replace LANG with language code
-FILE_BID_TEXT_DATE_LABEL: bid_opening_text_date_LANG_label.csv # annotated dates to be compared with FILE_BID_TEXT_DATE; replace LANG with language code
-FILE_BID_TEXT_DATE: bid_opening_text_date_LANG.csv # file after CSV parsing to find dates with LLM; replace LANG with language code
+FILE_BID_TEXT_DATE_LABEL: bid_opening_text_LANG_date_label.csv # annotated dates to be compared with FILE_BID_TEXT_DATE; replace LANG with language code
+FILE_BID_TEXT_DATE: bid_opening_text_LANG_date_llm.csv # file after CSV parsing to find dates with LLM; replace LANG with language code
 CSV_SEP: ;
 TED_URL: https://ted.europa.eu/TED # Text of a URL to be ignored when reading PDFs
 OPENAI_MODEL_NAME: gtp-4o # [gpt-4, gtp-4o, gpt-4-32k, gpt-3.5-turbo]
