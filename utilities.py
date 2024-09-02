@@ -1,4 +1,5 @@
 ### IMPORT ###
+import pathlib
 from pathlib import Path
 import pandas as pd
 
@@ -23,6 +24,35 @@ def list_files_by_type(directory: str, extension: str) -> list:
     file_list = [file for file in dir_path.glob(f'*{extension}') if not file.name.startswith('.') and not file.name.startswith('~$')]
     return file_list
 
+def list_subdirectories(directory: pathlib.PosixPath) -> list:
+    """
+    Returns a list of subdirectories contained within the specified directory, excluding hidden directories or system temporary directories.
+
+    Parameters:
+        directory (pathlib.PosixPath): The path to the directory to be scanned.
+
+    Returns:
+        list: A list of subdirectory names contained within the given directory, excluding hidden and system temporary directories.
+    """
+
+    # Force the type to PosixPath
+    dir_path = Path(directory)
+
+    # Check if the provided path is indeed a directory
+    if not dir_path.is_dir():
+        print(f"The provided path '{directory}' is not a valid directory.")
+        return []
+
+    # Define a set of common system temporary directory names to exclude
+    system_temp_dirs = {'$RECYCLE.BIN', 'System Volume Information', 'Temporary Items', 'Trash', '.Trashes', 'tmp', 'Temp'}
+
+    # Use a list comprehension to gather all directories, excluding hidden and system temporary ones
+    subdirectories = [
+        subdir.name for subdir in dir_path.iterdir() 
+        if subdir.is_dir() and not subdir.name.startswith('.') and subdir.name not in system_temp_dirs
+    ]
+
+    return subdirectories
 
 def read_csv_data_to_df(path_csv: str, col_type: dict, csv_sep: str = ",") -> pd.DataFrame:
     """

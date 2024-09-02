@@ -166,9 +166,11 @@ _todo/
 
 # Ignore every file the directory
 guue/*
+data/*
 
 # But do not ignore the directory itself
 !guue/.gitkeep
+!data/.gitkeep
 
 # Env
 .env
