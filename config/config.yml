@@ -21,3 +21,5 @@ LOG_PDF_LLM: ted_log_pdf_llm.csv # Timing to extract dates from PDFs with LLM
 LOG_PDF_LLM_HEADER: lang;model;time_start;time_end;time_delta;data_len;model
 TEST_SAMPLE: 5 # To test notebook functionality on a reduced dataset (PDF); set 0 for ALL
 BID_OPENING_EVENT: BID-OPENING # name of the new event
+STATS_DIR: stats
+STATS_FILE_VALID_BIDS: stats_valid_bids_country.csv
