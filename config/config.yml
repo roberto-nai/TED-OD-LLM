@@ -1,20 +1,23 @@
 # config.yml
 
-DOWNLOAD_DIR: /Volumes/SAMSUNG-PHD/PhD/Corsi da seguire/Knowledge management and information extraction from structured and unstructured data for process mining (techniques, algorithms, and tools)/Python - GUUE in CSV per LOG # Directory where the files were downloaded
+DOWNLOAD_DIR: /Volumes/SAMSUNG-PHD/PhD/Corsi da seguire/Knowledge management and information extraction from structured and unstructured data for process mining (techniques, algorithms, and tools)/Python - GUUE in CSV per LOG # Directory where the PDF files were downloaded
+EVENT_LOG_DIR: /Volumes/SAMSUNG-PHD/PhD/Corsi da seguire/Knowledge management and information extraction from structured and unstructured data for process mining (techniques, algorithms, and tools)/Python - GUUE in CSV per LOG/data_log # Directory where the event logs were created
 GUUE_DIR: guue # directory with PDFs
 DATA_DIR: data # directory with data (extracted parsing the PDFs)
+FILE_EVENT_LOG: TED_log_YS-YE_LANG.csv # initial event log to be enriched (YS = year start, YE = year end, LANG = language)
 FILE_BID_TEXT: bid_opening_text_LANG.csv # file created after PDF parsing with text (input for LLM); replace LANG with language code
 FILE_BID_TEXT_DATE_LABEL: bid_opening_text_LANG_date_label.csv # annotated dates to be compared with FILE_BID_TEXT_DATE; replace LANG with language code
 FILE_BID_TEXT_DATE: bid_opening_text_LANG_date_llm.csv # file after CSV parsing to find dates with LLM; replace LANG with language code
 CSV_SEP: ;
 TED_URL: https://ted.europa.eu/TED # Text of a URL to be ignored when reading PDFs
 TED_URL_HTTP: http://ted.europa.eu/TED # Text of a URL to be ignored when reading PDFs
-OPENAI_MODEL_NAME: gtp-4o # [gpt-4, gtp-4o, gpt-4-32k, gpt-3.5-turbo]
+OPENAI_MODEL_NAME: gpt-3.5-turbo # [gpt-4, gpt-4-turbo, gpt-3.5-turbo]
 TIME_SLEEP: 3 # seconds
 YEAR_START: 2016 # Starting year (included)
 YEAR_END: 2022 # End year (included)
 LOG_PDF_EXTRACTION: ted_log_pdf_extraction.csv # Timing to extract texts markes from PDFs
 LOG_PDF_EXTRACTION_HEADER: lang;time_start;time_end;time_delta;num_files
 LOG_PDF_LLM: ted_log_pdf_llm.csv # Timing to extract dates from PDFs with LLM
-LOG_PDF_LLM_HEADER: lang;model;time_start;time_end;time_delta
-TEST_SAMPLE: 0 # To test notebook functionality on a reduced dataset (PDF); set 0 for ALL
+LOG_PDF_LLM_HEADER: lang;model;time_start;time_end;time_delta;data_len;model
+TEST_SAMPLE: 5 # To test notebook functionality on a reduced dataset (PDF); set 0 for ALL
+BID_OPENING_EVENT: BID-OPENING # name of the new event
