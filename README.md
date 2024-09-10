@@ -29,6 +29,8 @@ To use HuggingChat, subscribe to HuggingFace then save the login (```HC_EMAIL=".
 NOTE: HuggingChat has a login and query limit, so a ```time.sleep()``` was applied to avoid request blocking problems.    
 
 ## > Directories
+```anac_cig```  
+Directory with ANAC tender's CIG to be searched in the PDFs.  
 ```config```  
 Directory with the configuration file in YAML format (```config.yml```) and script to read it (```config_reader.py```).   
 ```data```  

@@ -23,3 +23,4 @@ TEST_SAMPLE: 5 # To test notebook functionality on a reduced dataset (PDF); set 
 BID_OPENING_EVENT: BID-OPENING # name of the new event
 STATS_DIR: stats
 STATS_FILE_VALID_BIDS: stats_valid_bids_country.csv
+ANAC_CIG_DIR: anac_cig
