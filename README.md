@@ -20,9 +20,11 @@ For each text in the CSV extracted in the script ```01_read_pdf.ipynb```, it req
 ```02_read_date_HUGCHAT.ipynb```  
 For each text in the CSV extracted in the script ```01_read_pdf.ipynb```, it requests the LLM to identify the date. Use HuggingChat supported by HuggingFace.  
 For ```02_*``` scripts, set ```BID_SAMPLE_SIZE``` in the ```config.yml``` file to apply LLM to only one sample out of the total. If ```BID_SAMPLE_SIZE``` is 0, LLM will be applied to the entire dataset.  
-```03_log_enrich.ipynb```  
+```03_read_date_LLM_vs_labels.ipynb```  
+Given the annotated dataset with the expected date labels and the values in response from the LLM, it calculates the correctness of the returned responses with respect to the labels.  
+```04_log_enrich.ipynb```  
 Enrich the event log with previous data obtainied from ```02_*``` scripts.  
-```04_read_pdf_to_ANAC.ipynb```  
+```05_read_pdf_to_ANAC.ipynb```  
 Extracts IGC values from texts in PDFs.    
 
 ## > Script Dependencies
